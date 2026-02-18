@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CapCut Master — Guia Interativo de Edição Mobile</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== MENU FIXO ===== -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <span class="logo-icon">🎬</span>
+        <span>CapCut <strong>Master</strong></span>
+      </div>
+      <div class="nav-search">
+        <input type="text" id="searchInput" placeholder="🔍 Pesquisar tutorial..." />
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== TELA INICIAL (HERO) ===== -->
+  <section id="hero">
+    <div class="hero-bg-glow"></div>
+    <div class="hero-content">
+      <p class="hero-badge">✨ Guia Interativo 2024</p>
+      <h1>Aprenda a editar<br /><span class="gradient-text">vídeos incríveis</span><br />no CapCut</h1>
+      <p class="hero-sub">Tutoriais simples, rápidos e profissionais</p>
+      <button id="btnEntrar" class="btn-primary" onclick="openGuide()">
+        <span>Entrar no Guia</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+    <div class="hero-visual">
+      <div class="phone-mockup">
+        <div class="phone-screen">
+          <div class="phone-line"></div>
+          <div class="phone-line short"></div>
+          <div class="phone-bar"></div>
+          <div class="phone-bar thin"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PAINEL DE TUTORIAIS ===== -->
+  <section id="guide" class="hidden">
+    <div class="guide-header">
+      <h2>Escolha um <span class="gradient-text">Tutorial</span></h2>
+      <p>Clique em qualquer técnica para aprender o passo a passo</p>
+    </div>
+
+    <div class="tutorials-grid" id="tutorialsGrid">
+
+      <!-- TUTORIAL 1 -->
+      <div class="card" data-id="1" data-keywords="fluido suave velocidade estabilização movimento">
+        <button class="card-btn" onclick="toggleTutorial(1)">
+          <span class="card-icon">🎥</span>
+          <span class="card-title">Como deixar vídeo mais fluido</span>
+          <span class="card-arrow">›</span>
+        </button>
+        <div class="tutorial-content" id="tutorial-1">
+          <div class="tutorial-inner">
+            <div class="section-tag">📖 Explicação</div>
+            <p>Um vídeo fluido transmite profissionalismo e mantém a atenção do espectador. No CapCut, você tem ferramentas poderosas para suavizar qualquer gravação.</p>
+
+            <div class="section-tag">📋 Passo a Passo</div>
+            <ol>
+              <li>Importe o vídeo e acesse <strong>Ferramentas de vídeo</strong></li>
+              <li>Toque em <strong>"Estabilizar"</strong> — use nível 2 ou 3 para início</li>
+              <li>Ajuste a <strong>velocidade</strong>: entre 0.9x e 1.1x evita saltadas</li>
+              <li>Use <strong>"Curva de velocidade"</strong> para aceleração/desaceleração suave</li>
+              <li>Evite cortes diretos — adicione <strong>transições de 0.3s</strong> entre clipes</li>
+              <li>Ative <strong>"Correção de rolagem"</strong> em câmeras lentas</li>
+            </ol>
+
+            <div class="tip-box">
+              <span>💡 Dica Profissional</span>
+              <p>Grave com 60fps e exporte em 30fps — isso cria uma suavidade natural sem precisar editar.</p>
+            </div>
+
+            <div class="error-box">
+              <span>⚠️ Erro Comum</span>
+              <p>Usar estabilização máxima (nível 5) em vídeos já estáveis — isso distorce as bordas da imagem.</p>
+            </div>
+
+            <div class="result-box">
+              <span>✅ Resultado Esperado</span>
+              <p>Vídeo com movimentos suaves, sem tremores e com transições naturais que parecem cinema.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TUTORIAL 2 -->
+      <div class="card" data-id="2" data-keywords="legenda texto fala sincronizar subtitulo">
+        <button class="card-btn" onclick="toggleTutorial(2)">
+          <span class="card-icon">💬</span>
+          <span class="card-title">Como criar legenda que acompanha o vídeo</span>
+          <span class="card-arrow">›</span>
+        </button>
+        <div class="tutorial-content" id="tutorial-2">
+          <div class="tutorial-inner">
+            <div class="section-tag">📖 Explicação</div>
+            <p>Legendas aumentam o engajamento em até 80% — a maioria das pessoas assiste com o som desligado. Aprenda a criar legendas que parecem profissionais.</p>
+
+            <div class="section-tag">📋 Passo a Passo</div>
+            <ol>
+              <li>Vá em <strong>Texto → Auto Legenda</strong> para gerar automaticamente</li>
+              <li>Revise cada legenda: corrija erros de transcrição</li>
+              <li>Divida frases longas em <strong>máximo 5 palavras</strong> por legenda</li>
+              <li>Ajuste o tempo: cada legenda deve ficar visível por <strong>1.5 a 2 segundos</strong></li>
+              <li>Escolha uma fonte bold e cor contrastante (branco com sombra preta)</li>
+              <li>Centralize na parte inferior do vídeo, a 20% da borda</li>
+            </ol>
+
+            <div class="tip-box">
+              <span>💡 Dica Profissional</span>
+              <p>Use a fonte "Bold" com contorno preto de 3px — funciona em qualquer fundo sem perder legibilidade.</p>
+            </div>
+
+            <div class="error-box">
+              <span>⚠️ Erro Comum</span>
+              <p>Deixar legendas na área central do vídeo — sempre prefira a parte inferior para não cobrir o rosto.</p>
+            </div>
+
+            <div class="result-box">
+              <span>✅ Resultado Esperado</span>
+              <p>Legendas precisas, legíveis e perfeitamente sincronizadas com a fala, como nos vídeos virais do TikTok.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TUTORIAL 3 -->
+      <div class="card" data-id="3" data-keywords="escuro fundo vinheta brilho foco destaque">
+        <button class="card-btn" onclick="toggleTutorial(3)">
+          <span class="card-icon">🌑</span>
+          <span class="card-title">Como escurecer fundo e destacar o centro</span>
+          <span class="card-arrow">›</span>
+        </button>
+        <div class="tutorial-content" id="tutorial-3">
+          <div class="tutorial-inner">
+            <div class="section-tag">📖 Explicação</div>
+            <p>Criar foco visual guia o olho do espectador para o que importa. O efeito vinheta é um dos mais usados em vídeos profissionais.</p>
+
+            <div class="section-tag">📋 Passo a Passo</div>
+            <ol>
+              <li>Selecione o clipe e vá em <strong>Ajustar → Brilho</strong></li>
+              <li>Reduza o brilho geral para <strong>-15 a -25</strong></li>
+              <li>Aumente o <strong>Contraste para +10</strong> para compensar</li>
+              <li>Vá em <strong>Filtros → Buscar "Vinheta"</strong></li>
+              <li>Aplique vinheta com intensidade <strong>40-60%</strong></li>
+              <li>Combine com <strong>Saturação ligeiramente reduzida</strong> para look cinematográfico</li>
+            </ol>
+
+            <div class="tip-box">
+              <span>💡 Dica Profissional</span>
+              <p>Adicione uma camada de gradiente escuro nas bordas usando "Sobreposição" — isso cria uma vinheta mais natural que filtros automáticos.</p>
+            </div>
+
+            <div class="error-box">
+              <span>⚠️ Erro Comum</span>
+              <p>Aplicar vinheta muito forte (acima de 80%) — fica artificial e amador em vez de cinematográfico.</p>
+            </div>
+
+            <div class="result-box">
+              <span>✅ Resultado Esperado</span>
+              <p>Centro do vídeo iluminado com bordas suavemente escurecidas, criando foco natural no sujeito principal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TUTORIAL 4 -->
+      <div class="card" data-id="4" data-keywords="texto aparecer fade animação entrada suave">
+        <button class="card-btn" onclick="toggleTutorial(4)">
+          <span class="card-icon">✨</span>
+          <span class="card-title">Como fazer texto aparecer suave</span>
+          <span class="card-arrow">›</span>
+        </button>
+        <div class="tutorial-content" id="tutorial-4">
+          <div class="tutorial-inner">
+            <div class="section-tag">📖 Explicação</div>
+            <p>Textos que simplesmente aparecem de repente quebram a experiência visual. A animação Fade transforma qualquer texto em algo elegante e profissional.</p>
+
+            <div class="section-tag">📋 Passo a Passo</div>
+            <ol>
+              <li>Adicione o texto desejado na timeline</li>
+              <li>Com o texto selecionado, toque em <strong>"Animação"</strong></li>
+              <li>Em <strong>"Entrada"</strong>, selecione <strong>"Fade In"</strong></li>
+              <li>Ajuste a duração da entrada para <strong>0.4 a 0.6 segundos</strong></li>
+              <li>Em <strong>"Saída"</strong>, selecione <strong>"Fade Out"</strong> com 0.3 segundos</li>
+              <li>Teste e ajuste para que a leitura seja confortável</li>
+            </ol>
+
+            <div class="tip-box">
+              <span>💡 Dica Profissional</span>
+              <p>Combine Fade In com uma leve subida ("Rise" no CapCut) — cria aquele efeito elegante de textos em comerciais de luxo.</p>
+            </div>
+
+            <div class="error-box">
+              <span>⚠️ Erro Comum</span>
+              <p>Usar animações muito rápidas (0.1s) — o olho humano não consegue processar e parece um bug.</p>
+            </div>
+
+            <div class="result-box">
+              <span>✅ Resultado Esperado</span>
+              <p>Texto que surge e desaparece de forma elegante, como em trailers de filmes e comerciais profissionais.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TUTORIAL 5 -->
+      <div class="card" data-id="5" data-keywords="troca frases sequência texto ritmo sobreposição">
+        <button class="card-btn" onclick="toggleTutorial(5)">
+          <span class="card-icon">🔄</span>
+          <span class="card-title">Como criar efeito de troca de frases</span>
+          <span class="card-arrow">›</span>
+        </button>
+        <div class="tutorial-content" id="tutorial-5">
+          <div class="tutorial-inner">
+            <div class="section-tag">📖 Explicação</div>
+            <p>O efeito de frases que se sucedem cria ritmo visual e mantém a atenção do espectador. Muito usado em vídeos motivacionais e de storytelling.</p>
+
+            <div class="section-tag">📋 Passo a Passo</div>
+            <ol>
+              <li>Crie o primeiro texto e defina sua duração</li>
+              <li>Na timeline, posicione o próximo texto <strong>logo após</strong> o anterior terminar</li>
+              <li>Deixe um <strong>gap de 0.1s</strong> entre cada texto (pequena pausa)</li>
+              <li>Use a mesma fonte e tamanho em todos para consistência</li>
+              <li>Adicione animação de saída rápida e entrada rápida (0.2s cada)</li>
+              <li>Sincronize as trocas com a batida da música ou pausas na fala</li>
+            </ol>
+
+            <div class="tip-box">
+              <span>💡 Dica Profissional</span>
+              <p>Use a função "Duplicar" no texto e apenas mude o conteúdo — mantém todas as animações e formatação idênticas.</p>
+            </div>
+
+            <div class="error-box">
+              <span>⚠️ Erro Comum</span>
+              <p>Sobrepor textos — dois textos visíveis ao mesmo tempo criam confusão. Use sempre um de cada vez.</p>
+            </div>
+
+            <div class="result-box">
+              <span>✅ Resultado Esperado</span>
+              <p>Sequência de frases com ritmo dinâmico, como nos reels motivacionais que viralizam no Instagram.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TUTORIAL 6 -->
+      <div class="card" data-id="6" data-keywords="visual profissional celular máscara arredondada contraste cores">
+        <button class="card-btn" onclick="toggleTutorial(6)">
+          <span class="card-icon">📱</span>
+          <span class="card-title">Como criar visual profissional de celular</span>
+          <span class="card-arrow">›</span>
+        </button>
+        <div class="tutorial-content" id="tutorial-6">
+          <div class="tutorial-inner">
+            <div class="section-tag">📖 Explicação</div>
+            <p>Vídeos gravados no celular podem parecer profissionais com os ajustes certos. A chave é usar máscaras, proporções e cores que transmitem qualidade.</p>
+
+            <div class="section-tag">📋 Passo a Passo</div>
+            <ol>
+              <li>Acesse <strong>Sobreposição → Máscara</strong> e selecione bordas arredondadas</li>
+              <li>Ajuste o raio das bordas para <strong>30-50px</strong></li>
+              <li>Aumente o <strong>Contraste em +15</strong> para imagem mais definida</li>
+              <li>Reduza levemente a <strong>Temperatura de cor</strong> para tons mais neutros</li>
+              <li>Adicione uma <strong>moldura sutil</strong> em Sobreposições</li>
+              <li>Use o <strong>formato 9:16</strong> com fundo desfocado do próprio vídeo</li>
+            </ol>
+
+            <div class="tip-box">
+              <span>💡 Dica Profissional</span>
+              <p>Use o efeito "Blur" no fundo do vídeo (para preencher o formato vertical) em vez de fundo preto — parece muito mais profissional.</p>
+            </div>
+
+            <div class="error-box">
+              <span>⚠️ Erro Comum</span>
+              <p>Usar filtros de cores muito saturadas — cores neutras e naturais transmitem mais credibilidade e profissionalismo.</p>
+            </div>
+
+            <div class="result-box">
+              <span>✅ Resultado Esperado</span>
+              <p>Vídeo com bordas arredondadas elegantes, cores equilibradas e visual que parece produção profissional.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TUTORIAL 7 -->
+      <div class="card" data-id="7" data-keywords="música sincronizar volume cortar batida áudio">
+        <button class="card-btn" onclick="toggleTutorial(7)">
+          <span class="card-icon">🎵</span>
+          <span class="card-title">Como sincronizar música com o vídeo</span>
+          <span class="card-arrow">›</span>
+        </button>
+        <div class="tutorial-content" id="tutorial-7">
+          <div class="tutorial-inner">
+            <div class="section-tag">📖 Explicação</div>
+            <p>A sincronização entre vídeo e música transforma um clipe comum em algo memorável. O CapCut tem ferramentas poderosas para isso.</p>
+
+            <div class="section-tag">📋 Passo a Passo</div>
+            <ol>
+              <li>Adicione a música e ative <strong>"Detectar Batida"</strong> no CapCut</li>
+              <li>O app marcará automaticamente os <strong>pontos de batida</strong> na timeline</li>
+              <li>Alinhe seus cortes de vídeo com essas marcações</li>
+              <li>Ajuste o volume da música: <strong>30-50%</strong> se tiver fala no vídeo</li>
+              <li>Use <strong>Fade In</strong> no início e <strong>Fade Out</strong> no fim da música</li>
+              <li>Para encerrar, corte a música em um compasso natural (não no meio)</li>
+            </ol>
+
+            <div class="tip-box">
+              <span>💡 Dica Profissional</span>
+              <p>Reduza o volume da música nos momentos de fala importante usando "Automação de volume" — isso é chamado de ducking e é técnica usada em podcasts profissionais.</p>
+            </div>
+
+            <div class="error-box">
+              <span>⚠️ Erro Comum</span>
+              <p>Cortar a música abruptamente no final — sempre adicione um Fade Out de pelo menos 1 segundo para evitar o "choque" sonoro.</p>
+            </div>
+
+            <div class="result-box">
+              <span>✅ Resultado Esperado</span>
+              <p>Vídeo com música que parece feita para as cenas, com cortes que "dançam" com a batida naturalmente.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TUTORIAL 8 -->
+      <div class="card" data-id="8" data-keywords="exportar qualidade resolução fps 4k">
+        <button class="card-btn" onclick="toggleTutorial(8)">
+          <span class="card-icon">🚀</span>
+          <span class="card-title">Como exportar sem perder qualidade</span>
+          <span class="card-arrow">›</span>
+        </button>
+        <div class="tutorial-content" id="tutorial-8">
+          <div class="tutorial-inner">
+            <div class="section-tag">📖 Explicação</div>
+            <p>Exportar com configurações erradas pode arruinar horas de edição. Configure corretamente e seu vídeo ficará nítido em qualquer tela.</p>
+
+            <div class="section-tag">📋 Passo a Passo</div>
+            <ol>
+              <li>Toque no ícone de exportar (seta para cima) no canto superior direito</li>
+              <li>Selecione <strong>Resolução: 1080p</strong> (para a maioria dos casos)</li>
+              <li>Se tiver câmera 4K, use <strong>2160p (4K)</strong> para máxima qualidade</li>
+              <li>Ajuste os <strong>FPS para 30</strong> (padrão) ou <strong>60fps</strong> para vídeos dinâmicos</li>
+              <li>Defina <strong>Taxa de bits: Alta</strong> para melhor compressão</li>
+              <li>Toque em <strong>Exportar</strong> e aguarde — não saia do app</li>
+            </ol>
+
+            <div class="tip-box">
+              <span>💡 Dica Profissional</span>
+              <p>Para TikTok e Reels: exporte em 1080p/30fps. Para YouTube: use 1080p/60fps. O 4K só vale se seu conteúdo foi gravado em 4K.</p>
+            </div>
+
+            <div class="error-box">
+              <span>⚠️ Erro Comum</span>
+              <p>Sair do CapCut durante a exportação — isso pode corromper o arquivo. Mantenha a tela ativa até terminar.</p>
+            </div>
+
+            <div class="result-box">
+              <span>✅ Resultado Esperado</span>
+              <p>Vídeo exportado nítido, sem pixelização, com tamanho de arquivo adequado para upload nas redes sociais.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /tutorials-grid -->
+
+    <!-- Mensagem de nenhum resultado -->
+    <div id="noResults" class="no-results hidden">
+      <span>😕</span>
+      <p>Nenhum tutorial encontrado. Tente outro termo.</p>
+    </div>
+
+  </section>
+
+  <!-- ===== BOTÃO VOLTAR AO TOPO ===== -->
+  <button id="backToTop" onclick="scrollToTop()" title="Voltar ao topo">↑</button>
+
+  <script src="script.js"></script>
+</body>
+                             </html>
